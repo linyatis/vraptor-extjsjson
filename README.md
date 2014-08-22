@@ -2,13 +2,15 @@
 
 ##Installing
 
-Add to your pom:
+You have to clone or download this and run `mvn clean install`.
+
+Then, add to your pom:
 
 ```
 <dependency>
 <groupId>br.com.caelum.vraptor</groupId>
 <artifactId>vraptor-extjsjson</artifactId>
-<version>1.0.0-SNAPSHOT</version>
+<version>1.0.0-beta</version>
 </dependency>
 
 ```
