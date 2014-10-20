@@ -8,9 +8,9 @@ Then, add to your pom:
 
 ```
 <dependency>
-<groupId>br.com.caelum.vraptor</groupId>
+<groupId>br.eng.flyra</groupId>
 <artifactId>vraptor-extjsjson</artifactId>
-<version>1.0.0-beta</version>
+<version>1.0.0</version> <!-- or newest -->
 </dependency>
 
 ```
