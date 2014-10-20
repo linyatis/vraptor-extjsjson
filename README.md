@@ -24,7 +24,7 @@ With `result.use(ExtJsJson.class)` you can use:
  - `total()`: include "total" param with your collection size (your object has to be a collection);
  - `total(int size)`: include "total" param with given size (your object has to be a collection);
  - `message(String msg)`: include "msg" param with given text;
- - **`from(Object object, String alias)`**: include your object in the `Serializer`, with the given alias. From this method, it uses the `br.com.caelum.vraptor.serialization.Serializer`, so it is the same as the as the `result.use(Results.json()).from()` (i.e., you can use include(), exclude() and recursive());
+ - **`from(Object object, String alias)`**: include your object in the `Serializer`, with the given alias. From this method, it uses the `br.com.caelum.vraptor.serialization.Serializer`, so it is the same as the as the `result.use(Results.json()).from()` (i.e., for now, you can use just recursive());
  - `from(Object object)`: the same as above, but with default alias "data" (ExtJS default alias).
  
  Then, you must finish with `serialize()`, as well as `Results.json()` does.
