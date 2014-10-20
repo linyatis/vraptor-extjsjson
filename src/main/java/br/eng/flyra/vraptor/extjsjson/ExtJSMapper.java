@@ -1,4 +1,4 @@
-package br.com.caelum.vraptor.extjsjson;
+package br.eng.flyra.vraptor.extjsjson;
 
 import java.util.ArrayList;
 import java.util.Collection;

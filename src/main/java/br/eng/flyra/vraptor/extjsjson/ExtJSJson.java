@@ -1,4 +1,4 @@
-package br.com.caelum.vraptor.extjsjson;
+package br.eng.flyra.vraptor.extjsjson;
 
 import javax.enterprise.inject.Specializes;
 

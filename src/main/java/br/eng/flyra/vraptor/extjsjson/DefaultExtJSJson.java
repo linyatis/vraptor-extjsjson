@@ -1,4 +1,4 @@
-package br.com.caelum.vraptor.extjsjson;
+package br.eng.flyra.vraptor.extjsjson;
 
 import javax.inject.Inject;
 
@@ -11,14 +11,22 @@ import br.com.caelum.vraptor.serialization.Serializer;
  * @author José Filipe Lyra
  * 
  */
-public class ExtJSJsonImpl implements ExtJSJson {
+public class DefaultExtJSJson implements ExtJSJson {
 
-	@Inject
 	private ExtJSMapper mapper;
-	@Inject
 	private JSONSerialization json;
 
-	public ExtJSJsonImpl() {
+	/** 
+	 * @deprecated CDI eyes only
+	 */
+	protected DefaultExtJSJson() {
+		this(null, null);
+	}
+	
+	@Inject
+	public DefaultExtJSJson(JSONSerialization json, ExtJSMapper mapper) {
+		this.json = json;
+		this.mapper = mapper;
 	}
 
 	@Override
