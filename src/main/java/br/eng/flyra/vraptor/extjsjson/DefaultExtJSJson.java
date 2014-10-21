@@ -16,13 +16,13 @@ public class DefaultExtJSJson implements ExtJSJson {
 	private ExtJSMapper mapper;
 	private JSONSerialization json;
 
-	/** 
+	/**
 	 * @deprecated CDI eyes only
 	 */
 	protected DefaultExtJSJson() {
 		this(null, null);
 	}
-	
+
 	@Inject
 	public DefaultExtJSJson(JSONSerialization json, ExtJSMapper mapper) {
 		this.json = json;
@@ -36,7 +36,7 @@ public class DefaultExtJSJson implements ExtJSJson {
 
 	@Override
 	public <T> Serializer from(T object, String alias) {
-		return this.json.withoutRoot().from(this.mapper.map(object, alias));
+		return this.json.from(object, alias);
 	}
 
 	@Override
