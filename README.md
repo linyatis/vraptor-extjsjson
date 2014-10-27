@@ -64,8 +64,7 @@ Results in:
     "data" : {
         "id" : 1,
         "name" : "John"
-    },
-    "success" : true
+    }
 }
 ```
 
@@ -92,36 +91,10 @@ Results in:
     }, {
         "id" : 2,
         "name" : "Mary"
-    }],
-    "success" : true
+    }]
 }
 ```
 
-####With total param (collection)
+You can see more use cases [here in the test][1].
 
-```
-@Controller
-public class MyController{
-    //...
-
-    public void list() {
-        result.use(ExtJSJson.class).total().from(users).serialize();
-    }
-}
-
-```
-Results in:
-
-```
-{
-    "data" : [{
-        "id" : 1,
-        "name" : "John"
-    }, {
-        "id" : 2,
-        "name" : "Mary"
-        }],
-    "success" : true,
-    "total" : 2
-}
-```
+[1]:https://github.com/linyatis/vraptor-extjsjson/blob/master/src/test/java/br/eng/flyra/vraptor/extjsjson/DefaultExtJSJsonTest.java#L102-L202
