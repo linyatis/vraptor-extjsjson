@@ -101,7 +101,8 @@ public class DefaultExtJSJsonTest {
 
 	@Test
 	public void shouldSerializeObject() {
-		String expectedResult = "{\"data\":{\"price\":15.0,\"comments\":\"pack it nicely, please\"},\"success\":true}";
+		//String expectedResult = "{\"data\":{\"price\":15.0,\"comments\":\"pack it nicely, please\"},\"success\":true}";
+		String expectedResult = "{\"data\":{\"price\":15.0,\"comments\":\"pack it nicely, please\"}}";
 
 		Order order = new Order(new Client("Jose Filipe Lyra"), 15.0,
 				"pack it nicely, please");
@@ -112,8 +113,9 @@ public class DefaultExtJSJsonTest {
 
 	@Test
 	public void shouldSerializeObjectWithAlias() {
-		String expectedResult = "{\"order\":{\"price\":15.0,\"comments\":\"pack it nicely, please\"},\"success\":true}";
-
+		//String expectedResult = "{\"order\":{\"price\":15.0,\"comments\":\"pack it nicely, please\"},\"success\":true}";
+		String expectedResult = "{\"order\":{\"price\":15.0,\"comments\":\"pack it nicely, please\"}}";
+		
 		Order order = new Order(new Client("Jose Filipe Lyra"), 15.0,
 				"pack it nicely, please");
 
@@ -123,7 +125,8 @@ public class DefaultExtJSJsonTest {
 	
 	@Test
 	public void shouldSerializeCollection() {
-		String expectedResult = "{\"data\":[{\"price\":15.0,\"comments\":\"pack it nicely, please\"}],\"success\":true}";
+		//String expectedResult = "{\"data\":[{\"price\":15.0,\"comments\":\"pack it nicely, please\"}],\"success\":true}";
+		String expectedResult = "{\"data\":[{\"price\":15.0,\"comments\":\"pack it nicely, please\"}]}";
 
 		List<Order> orders = new ArrayList<Order>();
 		
@@ -138,7 +141,8 @@ public class DefaultExtJSJsonTest {
 	
 	@Test
 	public void shouldSerializeCollectionRecursively() {
-		String expectedResult = "{\"data\":[{\"client\":{\"name\":\"Jose Filipe Lyra\"},\"price\":15.0,\"comments\":\"pack it nicely, please\"}],\"success\":true}";
+		//String expectedResult = "{\"data\":[{\"client\":{\"name\":\"Jose Filipe Lyra\"},\"price\":15.0,\"comments\":\"pack it nicely, please\"}],\"success\":true}";
+		String expectedResult = "{\"data\":[{\"client\":{\"name\":\"Jose Filipe Lyra\"},\"price\":15.0,\"comments\":\"pack it nicely, please\"}]}";
 
 		List<Order> orders = new ArrayList<Order>();
 		
@@ -153,7 +157,9 @@ public class DefaultExtJSJsonTest {
 	
 	@Test
 	public void shouldSerializeCollectionWithTotal() {
-		String expectedResult = "{\"total\":1,\"data\":[{\"price\":15.0,\"comments\":\"pack it nicely, please\"}],\"success\":true}";
+		//String expectedResult = "{\"total\":1,\"data\":[{\"price\":15.0,\"comments\":\"pack it nicely, please\"}],\"success\":true}";
+		String expectedResult = "{\"data\":[{\"price\":15.0,\"comments\":\"pack it nicely, please\"}]}";
+		
 		List<Order> orders = new ArrayList<Order>();
 		
 		Order order = new Order(new Client("Jose Filipe Lyra"), 15.0,
