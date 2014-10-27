@@ -95,6 +95,8 @@ Results in:
 }
 ```
 
+####What else can I do?
+
 You can see more use cases [here in the test][1].
 
 [1]:https://github.com/linyatis/vraptor-extjsjson/blob/master/src/test/java/br/eng/flyra/vraptor/extjsjson/DefaultExtJSJsonTest.java#L102-L202
